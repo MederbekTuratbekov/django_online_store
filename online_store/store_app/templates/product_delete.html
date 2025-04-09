@@ -1,0 +1,6 @@
+<form method="post" enctype="multipart/form-data">
+  {% csrf_token %}
+  <p>Вы точно хотите удалить?</p>
+  <button type="submit">Да!</button>
+</form>
+<button type="reset"><a href="{% url 'product_list_url' %}">Cancel</a></button>

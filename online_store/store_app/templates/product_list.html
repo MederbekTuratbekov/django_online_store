@@ -1,0 +1,11 @@
+<ul>
+    {% for my_circle_for in list_product_view %}
+    <li>
+        <p><a href="{% url 'product_detail_url' my_circle_for.pk %}">Название: {{ my_circle_for.product_name }}</a></p>
+        <p>Категория: {{ my_circle_for.category }} </p>
+        <p>Цена: {{ my_circle_for.price }} </p>
+        <p>Год выпуска: {{ my_circle_for.created_date }} </p><br>
+    </li>
+    {% endfor %}
+</ul>
+<button><a href="{% url 'product_create_url' %}">Create</a></button>
