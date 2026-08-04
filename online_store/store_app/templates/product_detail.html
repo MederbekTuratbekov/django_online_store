@@ -1,20 +1,20 @@
-<p>Категория: {{ product_detail_view.category }} </p>
-<p>Название: {{ product_detail_view.product_name }} </p>
-<p>Цена: {{ product_detail_view.price }} </p>
-<p>Год выпуска: {{ product_detail_view.year }} </p>
-{% if product_detail_view.product_type == True %}
+<p>Категория: {{ product.category }} </p>
+<p>Название: {{ product.product_name }} </p>
+<p>Цена: {{ product.price }} </p>
+<p>Год выпуска: {{ product.year }} </p>
+{% if product.product_type == True %}
     <p>Состояние: Новый </p>
 {% else %}
     <p>Состояние: Б/У </p>
 {% endif %}
-<p>Описание: {{ product_detail_view.description }} </p>
-<p>Создано: {{ product_detail_view.created_date }} </p>
-{% if product_detail_view.image %}
-    <p><img src="{{ product_detail_view.image.url }}"></p>
+<p>Описание: {{ product.description }} </p>
+<p>Создано: {{ product.created_date }} </p>
+{% if product.image %}
+    <p><img src="{{ product.image.url }}"></p>
 {% else %}
     <p>Изображение не добавлено</p>
 {% endif %}
 
 <button type="reset"><a href="{% url 'product_list_url' %}">Cancel</a></button>
-<button type="submit"><a href="{% url 'product_update_url' product_detail_view.pk %}">Update</a></button>
-<button type="submit"><a href="{% url 'product_delete_url' product_detail_view.pk %} ">Delete</a></button>
+<button type="submit"><a href="{% url 'product_update_url' product.pk %}">Update</a></button>
+<button type="submit"><a href="{% url 'product_delete_url' product.pk %} ">Delete</a></button>
