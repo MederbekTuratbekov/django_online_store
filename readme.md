@@ -69,7 +69,8 @@ Open: `http://localhost:8000/`
 ---
 
 ## Project Structure
-```django_online_store/
+```
+django_online_store/
     .gitignore
     readme.md
     online_store/
